@@ -1,19 +1,7 @@
 language: ruby
 dist: xenial
-bundler_args: --without development
-
-rvm: truffleruby
-env:
-  - NIO4R_PURE=true JOB=1
-  - NIO4R_PURE=true JOB=2
-  - NIO4R_PURE=true JOB=3
-  - NIO4R_PURE=true JOB=4
-  - NIO4R_PURE=true JOB=5
-  - NIO4R_PURE=true JOB=6
-  - NIO4R_PURE=true JOB=7
-  - NIO4R_PURE=true JOB=8
-  - NIO4R_PURE=true JOB=9
-  - NIO4R_PURE=true JOB=10
-
-matrix:
-  fast_finish: true
+rvm: 2.6.2
+install: true
+script:
+  - ruby -ropenssl -e 'p OpenSSL::OPENSSL_LIBRARY_VERSION'
+  - ls -l /lib64/libssl.so
