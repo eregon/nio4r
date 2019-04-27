@@ -16,3 +16,6 @@ env:
 
 matrix:
   fast_finish: true
+
+before_install:
+  - TRUFFLERUBY_RECOMPILE_OPENSSL=true $HOME/.rvm/rubies/truffleruby-1.0.0-rc16/lib/truffle/post_install_hook.sh
