@@ -5,3 +5,5 @@ install: true
 script:
   - ruby -ropenssl -e 'p OpenSSL::OPENSSL_LIBRARY_VERSION'
   - ruby -ropenssl -e 'system "ldd", *p($".grep(/openssl\.so/))'
+  - ls -l /lib/x86_64-linux-gnu/libssl*
+  - ls -l /lib/x86_64-linux-gnu/libcrypto*
