@@ -4,4 +4,4 @@ rvm: 2.6.2
 install: true
 script:
   - ruby -ropenssl -e 'p OpenSSL::OPENSSL_LIBRARY_VERSION'
-  - ls -l /lib64/libssl.so
+  - ruby -ropenssl -e 'system "ldd", *p($".grep(/openssl\.so/))'
