@@ -1,5 +1,4 @@
 language: ruby
-cache: bundler
 dist: xenial
 bundler_args: --without development
 
