@@ -9,6 +9,7 @@ jobs:
     env:
       CI: true
       TESTOPTS: -v
+      NIO4R_PURE: true
 
     runs-on: ${{ matrix.os }}
     strategy:
