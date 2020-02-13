@@ -14,8 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ ubuntu-16.04, ubuntu-18.04, macos, windows-latest ]
-        ruby: [ 2.3, 2.4, 2.5, 2.6, 2.7, jruby ]
+        os: [ ubuntu-18.04 ]
+        ruby: [ 2.6, truffleruby-head ]
         exclude:
           - os: windows-latest
             ruby: 2.3
